@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Jakub Bedliński - Portfol</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap');
+
+    :root {
+      --m3-primary: 184, 195, 255;
+      --m3-on-primary: 0, 36, 135;
+      --m3-primary-container: 25, 58, 172;
+      --m3-on-primary-container: 221, 225, 255;
+
+      --m3-secondary: 230, 180, 255;
+      --m3-on-secondary: 73, 22, 103;
+      --m3-secondary-container: 98, 48, 128;
+      --m3-on-secondary-container: 245, 217, 255;
+
+      --m3-background: 27, 27, 31;
+      --m3-on-background: 226, 225, 236;
+
+      --m3-surface: 27, 27, 31;
+      --m3-on-surface: 226, 225, 236;
+      --m3-surface-variant: 69, 70, 79;
+      --m3-on-surface-variant: 198, 197, 208;
+
+      --m3-outline: 144, 144, 154;
+    }
+
+    body,
+    html {
+      background-color: rgb(var(--m3-background));
+      background-image: url(./src/background.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      font-family: 'Open Sans', sans-serif;
+      color: rgb(var(--m3-on-background));
+      margin: 0;
+      padding: 1rem 2rem;
+    }
+
+    nav {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+
+    nav h1 {
+      font-size: 3rem;
+      color: rgb(var(--m3-primary));
+      margin: 0;
+    }
+
+    main {
+      display: grid;
+      grid-template-areas:
+        "about about contact contact contact"
+        "verified verified main-card main-card main-card"
+        "school school main-card main-card main-card"
+        "second-card second-card main-card main-card main-card"
+        "second-card second-card github github github"
+        "second-card second-card other-projects other-projects other-projects"
+        "in-touch in-touch in-touch in-touch in-touch"
+        "touched touched touched touched touched";
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2rem;
+      max-width: 100%;
+    }
+
+    main .about {
+      grid-area: about;
+    }
+
+    main .contact {
+      grid-area: contact;
+    }
+
+    main .verified {
+      grid-area: verified;
+    }
+
+    main .main-card {
+      grid-area: main-card;
+    }
+
+    main .school {
+      grid-area: school;
+    }
+
+    main .second-card {
+      grid-area: second-card;
+    }
+
+    main .github {
+      grid-area: github;
+    }
+
+    main .other-projects {
+      grid-area: other-projects
+    }
+
+    main .in-touch {
+      grid-area: in-touch;
+    }
+
+    main .touched {
+      grid-area: touched;
+    }
+
+    main .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 2rem;
+    }
+
+    main>.content {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+
+    main>.content span,
+    main .container>.content span {
+      font-size: 4rem;
+      color: rgb(var(--m3-primary));
+    }
+
+    main .content .icon {
+      font-size: 6rem;
+      color: rgb(var(--m3-primary));
+    }
+
+
+    main .content .icon {
+      width: 1em;
+      height: 1em;
+    }
+
+    main .content .icon path {
+      fill: currentColor;
+    }
+
+    main .content .text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    main .content .text .chip-list {
+      font-size: 0.75rem;
+    }
+
+    main .contact {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    main .contact .method {
+      color: rgb(var(--m3-secondary));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    main .contact a.method {
+      color: rgb(var(--m3-secondary));
+      text-decoration: none;
+      transition: color 0.2s ease-in-out, scale 0.2s ease-in-out;
+    }
+
+    main .contact a.method:hover {
+      color: rgb(var(--m3-on-secondary-container));
+      scale: 1.1;
+    }
+
+    main .contact a.method>span {
+      font-size: 3rem;
+    }
+
+    main .content.github {
+      align-items: center;
+      justify-content: center;
+    }
+
+    main .content.github .text {
+      font-size: 2rem;
+      font-weight: 700;
+      max-width: 18ch;
+    }
+
+    main .content.github .text a {
+      transition: color 0.2s ease-in-out;
+      color: rgb(var(--m3-secondary));
+    }
+
+    main .content.github .text a:hover {
+      color: rgb(var(--m3-on-secondary-container));
+    }
+
+    main .container.other-projects {
+      display: flex;
+      gap: 2rem;
+      flex: 1;
+      flex-direction: row;
+    }
+
+    main .container.other-projects>* {
+      flex: 1;
+    }
+
+    main .in-touch {
+      display: flex;
+      flex-direction: row;
+      gap: .5em;
+      align-items: center;
+      font-size: 1.25rem;
+      justify-content: center;
+
+    }
+
+    main .contact.touched {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 1rem;
+      column-gap: 3rem;
+    }
+
+    main .contact.touched a.method {
+      flex-direction: row;
+      gap: 0;
+      transition: color 0.2s ease-in-out, scale 0.2s ease-in-out;
+    }
+
+    main .contact.touched a.method .text {
+      text-decoration: underline;
+    }
+
+    main .contact.touched a.method:hover {
+      color: rgb(var(--m3-on-secondary-container));
+      scale: 1.1;
+    }
+
+    .card {
+      background-color: rgb(var(--m3-surface));
+      padding: 1rem;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgb(var(--m3-outline));
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .card .img {
+      object-fit: cover;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+
+    .card .img img {
+      transition: transform 0.25s;
+      transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+      scale: 1.2;
+    }
+
+    .card .img:hover img {
+      transition: transform 0s;
+      --rotateY: 10deg;
+      --rotateX: 10deg;
+      transform: perspective(1000px) rotateY(var(--rotateY)) rotateX(var(--rotateX));
+    }
+
+    .card.horizonal .img:last-child {
+      border-radius: 1em 0 0 1em;
+    }
+
+    .card.horizonal .img:first-child {
+      border-radius: 0 1em 1em 0;
+    }
+
+    .card.vertical .img:first-child {
+      border-radius: 0 0 1em 1em;
+    }
+
+    .card.vertical .img:last-child {
+      border-radius: 1em 1em 0 0;
+    }
+
+    .card.vertical a {
+      align-self: flex-end;
+    }
+
+
+    .card.horizonal {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      align-items: stretch;
+    }
+
+    .card.horizonal .img img,
+    .card.vertical .img img {
+      width: 100%;
+    }
+
+    .card .content {
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      align-items: flex-start;
+      flex: 1;
+    }
+
+    .card .content .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .card .content .top .title {
+      font-size: 1.5em;
+      font-weight: 700;
+      margin: 0;
+      color: rgb(var(--m3-on-primary-container));
+    }
+
+    .card .content .top .status {
+      display: flex;
+      align-items: center;
+      gap: 0.25em;
+      height: 2em;
+    }
+
+    .card .content .top .status span {
+      color: rgb(var(--m3-secondary));
+    }
+
+    .card .content .description {
+      flex: 1;
+    }
+
+    .card .content a {
+      text-decoration: none;
+      color: rgb(var(--m3-primary));
+      min-width: max-content;
+    }
+
+    .card .content button {
+      background-color: rgb(var(--m3-secondary));
+      color: rgb(var(--m3-on-secondary));
+    }
+
+    .card .content button:hover::after {
+      background-color: rgb(var(--m3-secondary-container));
+    }
+
+
+
+    .chip-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 0.5em;
+      row-gap: 0.75em;
+    }
+
+
+    .chip {
+      display: flex;
+      border: 1px solid rgb(var(--m3-outline));
+      border-radius: 0.5em;
+      line-height: 2em;
+      font-size: 1em;
+      padding: 0 1em;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out;
+    }
+
+    .chip:has(.material-symbols-rounded) {
+      padding: 0 1em 0 .5em;
+      gap: 0.25em;
+    }
+
+    .chip .material-symbols-rounded {
+      font-size: 1.2em;
+      color: rgb(var(--m3-secondary));
+    }
+
+    .chip:hover {
+      background-color: rgba(var(--m3-secondary-container), 0.75);
+      color: rgb(var(--m3-on-secondary-container));
+      border: 1px solid transparent;
+    }
+
+
+    button {
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      background-color: rgb(var(--m3-primary));
+      color: rgb(var(--m3-on-primary));
+      border: none;
+      border-radius: 5em;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      line-height: 1.5em;
+      font-weight: 700;
+      transition: all 0.2s ease-in-out;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px rgb(var(--m3-outline));
+    }
+
+    button::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    button:hover::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(var(--m3-on-primary));
+      opacity: 0.3;
+    }
+
+    button:has(.material-symbols-rounded) {
+      padding: 0.5em 1.5em 0.5em 1em;
+      gap: 0.5em;
+    }
+
+    button .material-symbols-rounded {
+      font-size: 1.2em;
+    }
+
+    button span.ripple {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      animation: ripple 500ms linear;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .placeholder {
+      position: relative;
+      color: transparent;
+      border-radius: 0.5rem;
+      user-select: none;
+      display: inline-block;
+      background-image: radial-gradient(circle at center, rgb(var(--m3-on-surface-variant)) 0%, rgb(var(--m3-surface-variant)) 50%);
+      background-size: 200%;
+      background-position: -100%;
+      opacity: 0.5;
+      animation: shine 1s infinite;
+    }
+
+    #secondary-project {
+      flex: 1;
+    }
+
+
+
+    @media only screen and (max-width: 1200px) {
+      main {
+        grid-template-areas:
+          "about about contact"
+          "verified verified contact"
+          "school school second-card"
+          "main-card main-card second-card"
+          "main-card main-card second-card"
+          "github other-projects other-projects"
+          "in-touch in-touch in-touch"
+          "touched touched touched";
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      main .short {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        gap: 0;
+      }
+    }
+
+    @media only screen and (max-width: 900px) {
+      main {
+        grid-template-areas:
+          "about about about contact"
+          "verified verified verified contact"
+          "school school school contact"
+          "main-card main-card main-card main-card"
+          "main-card main-card main-card main-card"
+          "github github second-card second-card"
+          "other-projects other-projects second-card second-card"
+          "other-projects other-projects second-card second-card"
+          "other-projects other-projects in-touch in-touch"
+          "touched touched touched touched";
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      main .short {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        gap: 0;
+      }
+
+      main .container.other-projects {
+        flex-direction: column;
+      }
+    }
+
+
+    .animated {
+      opacity: 0;
+      animation-delay: 0.25s;
+    }
+
+    .fade-in {
+      animation: fade-in 0.5s ease-in-out forwards;
+    }
+
+    .fade-in-left {
+      animation: fade-in-left 0.5s ease-in-out forwards;
+    }
+
+    .fade-in-right {
+      animation: fade-in-right 0.5s ease-in-out forwards;
+    }
+
+    .fade-in-up {
+      animation: fade-in-up 0.5s ease-in-out forwards;
+    }
+
+    .fade-in-down {
+      animation: fade-in-down 0.5s ease-in-out forwards;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-in-down {
+      from {
+        transform: translateY(2em);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-in-left {
+      from {
+        transform: translateX(-2em);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-in-right {
+      from {
+        transform: translateX(2em);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-in-up {
+      from {
+        transform: translateY(-2em);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+
+    @keyframes shine {
+      0% {
+        background-position: 100%;
+      }
+
+      100% {
+        background-position: -100%;
+      }
+    }
+
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h1 class="animated" fade-direction="up">Jakub Bedliński</h1>
+  </nav>
+  <main>
+
+    <!-- START TODO -->
+    <div class="content about animated" fade-direction="left">
+      <span class="material-symbols-rounded">
+        person
+      </span>
+      <div class="text">
+        <div class="chip-list">
+          <div class="chip">
+            <span class="material-symbols-rounded">
+              today
+            </span>
+            04-07-2005
+          </div>
+          <div class="chip">
+            <span class="material-symbols-rounded">
+              location_on
+            </span>
+            Zabrze
+          </div>
+        </div>
+        Mam na imię Jakub Bedliński, aktualnie uczęszczam do zespołu szkół nr. 10 w Zabrzu na kierunku Technik-Programista. Swoją przyszłość widzę w branży IT.
+      </div>
+    </div>
+    <div class="content verified animated" fade-direction="left" style="animation-delay: 100ms;">
+      <span class="material-symbols-rounded">
+        neurology
+      </span>
+      <div class="text">
+        Aktualnie najwięcej programuję w języku java, również trochę w C#. W przeszłości miałem doświaczenie z językami: JavaScript, PHP, Lua i C++.
+      </div>
+    </div>
+    <div class="content school animated" fade-direction="left" style="animation-delay: 200ms;">
+      <span class="material-symbols-rounded">
+        school
+      </span>
+      <div class="text">
+        Ukończyłem egzamin zawodowy z klasyfikacją INF.03.
+      </div>
+    </div>
+    <!-- END -->
+
+    <div class="contact short">
+      <a target="_blank" href="mailto:kubabed772@gmail.com" class="method animated" fade-direction="up">
+        <span class="material-symbols-rounded">email</span>
+        <div class="text">
+          Mail
+        </div>
+      </a>
+      <a target="_blank" href="tel:+48888881058" class="method animated" fade-direction="up"
+        style="animation-delay: 100ms;">
+        <span class="material-symbols-rounded">phone</span>
+        <div class="text">
+          Phone
+        </div>
+      </a>
+      <a target="_blank" href="index.html" class="method animated page" fade-direction="up"
+        style="animation-delay: 200ms;">
+        <span class="material-symbols-rounded">language</span>
+        <div class="text">
+          Page
+        </div>
+      </a>
+    </div>
+    <div class="card horizonal main-card animated" style="animation-delay: 300ms;" id="main-project">
+      <div class="content">
+        <div class="top">
+          <h3 class="title">
+            <span class="placeholder">
+              titletitle
+            </span>
+          </h3>
+          <div class="status">
+            <span class="placeholder">
+              <span class="material-symbols-rounded"></span>
+              0
+            </span>
+          </div>
+        </div>
+        <div class="chip-list">
+        </div>
+        <div class="description">
+          <span class="placeholder">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis ipsum repellendus expedita voluptas
+            nihil
+          </span>
+        </div>
+        <a target="_blank" href="">
+          <button>
+            <span class="material-symbols-rounded">open_in_new</span>
+            <div class="text">
+              Check out
+            </div>
+          </button>
+        </a>
+      </div>
+      <div class="img">
+        <img src="./src/chess.png" alt="chess">
+      </div>
+    </div>
+    <div class="card vertical second-card animated" style="animation-delay: 300ms;" id="secondary-project">
+      <div class="img">
+        <img src="./src/tic-tac-toe.png" alt="tic-tac-toe">
+
+      </div>
+      <div class="content">
+        <div class="top">
+          <h3 class="title">
+            <span class="placeholder">
+              titletitle
+            </span>
+          </h3>
+          <div class="status">
+            <span class="placeholder">
+              <span class="material-symbols-rounded"></span>
+              0
+            </span>
+          </div>
+        </div>
+        <div class="chip-list">
+        </div>
+        <div class="description">
+          <div class="placeholder">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis ipsum repellendus expedita voluptas
+            nihil
+          </div>
+        </div>
+        <a target="_blank" href="">
+          <button>
+            <span class="material-symbols-rounded">open_in_new</span>
+            <div class="text">
+              Check out
+            </div>
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="content github animated" fade-direction="down" style="animation-delay: 100ms;">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 98 98">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+          fill="#fff" />
+      </svg>
+      <h2 class="text">
+        checkout my other projects on <a target="_blank" href="https://github.com/Zydson123">github</a>
+      </h2>
+    </div>
+    <div class="container other-projects">
+      <div class="card animated" fade-direction="down" style="animation-delay: 200ms;" id="other-project-1">
+        <div class="content">
+          <div class="top">
+            <h3 class="title">
+              <span class="placeholder">
+                titletitle
+              </span>
+            </h3>
+            <div class="status">
+              <span class="placeholder">
+                <span class="material-symbols-rounded"></span>
+                0
+              </span>
+            </div>
+          </div>
+          <div class="chip-list">
+          </div>
+          <div class="description">
+            <div class="placeholder">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis ipsum repellendus expedita voluptas
+              nihil
+            </div>
+          </div>
+          <a target="_blank" href="">
+            <button>
+              <span class="material-symbols-rounded">open_in_new</span>
+              <div class="text">
+                Check out
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="card animated" fade-direction="down" style="animation-delay: 300ms;" id="other-project-2">
+        <div class="content">
+          <div class="top">
+            <h3 class="title">
+              <span class="placeholder">
+                titletitle
+              </span>
+            </h3>
+            <div class="status">
+              <span class="placeholder">
+                <span class="material-symbols-rounded"></span>
+                0
+              </span>
+            </div>
+          </div>
+          <div class="chip-list">
+          </div>
+          <div class="description">
+            <div class="placeholder">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis ipsum repellendus expedita voluptas
+              nihil
+            </div>
+          </div>
+          <a target="_blank" href="">
+            <button>
+              <span class="material-symbols-rounded">open_in_new</span>
+              <div class="text">
+                Check out
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="in-touch animated" fade-direction="down">
+      Lets stay in
+      <button id="touch-btn">
+        <span class="material-symbols-rounded">touch_app</span>
+        <div class="text">
+          touch
+        </div>
+      </button>
+    </div>
+    <div class="contact touched">
+      <a target="_blank" href="mailto:kubabed772@gmail.com" class="method animated" fade-direction="right"
+        style="animation-delay: 100ms; animation-play-state: paused;">
+        <span class="material-symbols-rounded">email</span>
+        <div class="text">
+          kubabed772@gmail.com
+        </div>
+      </a>
+      <a target="_blank" href="tel:+48888881058" class="method animated" fade-direction="right"
+        style="animation-delay: 200ms; animation-play-state: paused;">
+        <span class="material-symbols-rounded">phone</span>
+        <div class="text">
+          <span>+48</span>
+          <span>888</span>
+          <span>881</span>
+          <span>058</span>
+        </div>
+      </a>
+      <a target="_blank" href="index.html" class="method animated page" fade-direction="right"
+        style="animation-delay: 300ms; animation-play-state: paused;">
+        <span class="material-symbols-rounded">language</span>
+        <div class="text">
+          <!-- TODO "linktree" (np. wlo.link) link name -->
+          https://wlo.link/@kubabed
+        </div>
+      </a>
+    </div>
+
+  </main>
+
+  <script>
+
+    // TODO potential changes
+    var projects = [
+      /* {
+          link: "https://api.github.com/repos/{user}/{repo}",
+          img: string (url),
+          config: {
+            description: boolean,
+            chips: 'topics' | 'language',
+            stats: 'forks' | 'watchers' | 'stargazers' | 'higiest',
+          },
+          id: string (id of element)
+      } */
+      {
+        link: "https://api.github.com/repos/Zydson123/chess-javaFX",
+        img: "./src/chess.png",
+        config: {
+          description: true,
+          chips: 'topics',
+          stats: 'highest',
+        },
+        id: "main-project"
+      },
+      {
+        link: "https://api.github.com/repos/Zydson123/tic_tac_toe-javaFX",
+        img: "./src/tic-tac-toe.png",
+        config: {
+          description: true,
+          chips: 'topics',
+          stats: 'highest',
+        },
+        id: "secondary-project"
+      },
+      {
+        link: "https://api.github.com/repos/Zydson123/java-uno",
+        id: "other-project-1",
+        config: {
+          description: true,
+          chips: 'language',
+          stats: 'highest',
+        }
+      },
+      {
+        link: "https://api.github.com/repos/Zydson123/java-dos",
+        id: "other-project-2",
+        config: {
+          description: true,
+          chips: 'language',
+          stats: 'highest',
+        }
+      },
+    ]
+    // TODO link to page (linktree, np. wlo.link)
+    var page = "https://wlo.link/@kubabed" // url
+
+    const request = async (url) =>
+      await fetch(url)
+        .then(response => response.json())
+        .then(data => data)
+
+
+    projects.forEach(project => {
+      request(project.link).then(data => {
+        let card = document.getElementById(project.id);
+        card.querySelector("a").href = data.html_url;
+        card.querySelector(".title").innerText = data.name.replace(/-|_/g, " ");
+
+        if (project.config.stats == "highest") {
+          let stats = [["star", data.stargazers_count], ["visibillity", data.watchers_count], ["call_split", data.forks_count]].sort((a, b) => b[1] - a[1])[0];
+          card.querySelector(".status").innerHTML = `
+          <span class="material-symbols-rounded">
+            ${stats[0]}
+            </span>
+            ${stats[1]}
+            `;
+        }
+        else
+          card.querySelector(".status").innerHTML = `
+          <span class="material-symbols-rounded">
+            ${project.config.stats == "forks" ? "call_split" : project.config.stats == "watchers" ? "visibility" : "star"}
+          </span>
+          ${data[project.config.stats + "_count"]}
+          `;
+
+        if (project.config.chips == "topics")
+          card.querySelector(".chip-list").innerHTML = data.topics.splice(0, 3).map(chip => `<div class="chip">${chip}</div>`).join("");
+        else if (project.config.chips == "language")
+          card.querySelector(".chip-list").innerHTML = `<div class="chip">${data.language}</div>`;
+
+        if (project.config.description)
+          card.querySelector(".description").innerText = data.description;
+        else
+          card.querySelector(".description").innerHTML = "";
+
+
+        if (project.img)
+          card.querySelector("img").src = project.img;
+      })
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          if (entry.target.getAttribute('fade-direction')) {
+            entry.target.classList.add('fade-in-' + entry.target.getAttribute('fade-direction'));
+          }
+        }
+      });
+    });
+
+    let observe = [...document.getElementsByClassName('animated')];
+    observe.forEach((element) => {
+      observer.observe(element);
+    });
+
+    document.querySelectorAll(".page").forEach(ele => ele.href = page);
+
+    const createRipple = (event) => {
+      let btn = event.currentTarget;
+
+      let circle = document.createElement("span");
+      let diameter = Math.max(btn.clientWidth, btn.clientHeight);
+      let radius = diameter / 2;
+
+      circle.style.width = circle.style.height = `${diameter}px`;
+      circle.style.left = `${event.clientX - btn.offsetLeft - diameter}px`;
+      // circle.style.top = `${event.clientY - btn.offsetTop - diameter}px`;
+      circle.style.top = `${btn.height}px`;
+      circle.classList.add("ripple");
+
+      let ripple = btn.querySelector(".ripple");
+
+      if (ripple)
+        ripple.remove();
+
+      circle.style.animation = "ripple 0.5s linear";
+      btn.appendChild(circle);
+
+    }
+
+    let buttons = document.getElementsByTagName("button");
+    for (let button of buttons) {
+      button.addEventListener("click", createRipple);
+    }
+
+    document.getElementById("touch-btn").addEventListener("click", () => {
+      document.querySelectorAll(".touched .method").forEach(ele => ele.style.animationPlayState = "running");
+    });
+
+    let cardImages = document.querySelectorAll(".card .img img");
+    cardImages.forEach(cardImage => {
+      cardImage.addEventListener("mousemove", (event) => {
+        rotateElement(event, cardImage);
+      });
+    });
+
+    const rotateElement = (event, element) => {
+      let rotateX = (event.offsetY / element.clientHeight) * -20 + 10;
+      let rotateY = (event.offsetX / element.clientWidth) * 20 - 10;
+      element.setAttribute("style", `--rotateX: ${rotateX}deg; --rotateY: ${rotateY}deg`);
+    }
+
+  </script>
+</body>
+
+</html>
